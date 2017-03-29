@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Training Chat!</title>
+    <link rel="stylesheet" href="components/chat/chat.css"/>
+    <link rel="stylesheet" href="components/form/form.css"/>
+</head>
+<body>
+
+
+<div class="app"></div>
+<!-- Generation of DOM -->
+
+<script src="components/chat/chat.js"></script>
+<script src="components/form/form.js"></script>
+<script src="modules/communication/communication.js"></script>
+<script src="components/app/app.js"></script>
+
+
+<!-- Application start -->
+<script>
+    'use strict';
+    function on(name, cb) {
+        this.el.addEventListener(name, cb);
+    }
+
+    function trigger(name, data) {
+        let event = new CustomEvent(name, {detail: data});
+        this.el.dispatchEvent(event);
+    }
+
+    function timestump(){
+        let date = new Date();
+
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        if (h < 10) {
+            h = `0${h}`;
+        }
+        if (m < 10) {
+            m = `0${m}`;
+        }
+        if (s < 10) {
+            s = `0${s}`;
+        }
+
+        return   `${h}:${m}:${s}`;
+
+    }
+    // for console testing create variable window.__app
+    window.__app = new window.App({
+        el: document.querySelector('.app')
+    });
+</script>
+</body>
+</html>

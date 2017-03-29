@@ -1,0 +1,39 @@
+.form{
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    background-color: black ;
+    height:60px;
+}
+textarea {
+    background-color : #3b342e;
+    font-size: medium;
+    color: white;
+    cursor: text;
+    width: 340px;
+    padding-left: 5px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+input {
+    color: antiquewhite;
+    background-color : darkslategrey;
+    width: 350px;
+    border: none;
+    height: 22px;
+
+}
+.user_color{
+ color: chartreuse;
+// font-size: larger;
+}
+
+.auser_color{
+ color: aqua;
+// font-size: larger;
+}
+form{
+    background-color: #3b342e;
+}

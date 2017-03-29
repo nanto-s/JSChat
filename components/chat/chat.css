@@ -1,0 +1,78 @@
+.container {
+     width: 350px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    background-color: #3b342e;
+    height: 400px;
+    color: white;
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "monaco", "Bitstream Vera Sans Mono", monospace;
+    font-size: small;
+    overflow-y: auto;
+
+}
+.header {
+    width: 340px;
+    display: block;
+    margin: 0 auto;
+    background-color: darkslategrey;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: antiquewhite;
+}
+.chat__box {
+  padding: 0 10px;
+
+
+}
+.img_container{
+    float:left;
+    width:50px;
+    display:block;
+    padding-right:10px;
+}
+.img{
+    width:43px;
+    height:43px;
+  // border-radius:25px;
+}
+.time{
+    font-size: 9px;
+    clear: both;
+    display: block;
+    text-align: right;
+    margin-top: 3px;
+    color: lightgray;
+}
+.container_msg {
+    width: 310px;
+    padding: 2px;
+    word-wrap: break-word;
+
+
+}
+.user{
+    background-color: white;
+    width: 200px;
+    color: black;
+}
+
+
+#wrap {
+    height:400px;
+    background:grey;
+    width:200px;
+    padding:10px;
+    overflow:scroll;
+}
+#wrap div {
+    width:180px;
+    padding:10px;
+    background:green;
+    color:#fff;
+    border:1px solid #000;
+    margin-bottom:5px;
+}
+
+
