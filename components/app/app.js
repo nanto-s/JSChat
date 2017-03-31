@@ -38,6 +38,7 @@
         render() {
             this.chat.render();
             this.form.render();
+            this.form.setFocus();
         }
    /**
     * @description Create Components of the chat
@@ -83,6 +84,7 @@
                 this.chat.addMessage(data);
                 this.chat.render();
                 this.form.reset();
+
             }]);
         }
          // for console testing

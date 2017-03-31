@@ -17,7 +17,7 @@
             this.el.innerHTML = `
                 <div class="form">
                 <form>
-                <textarea name="message" type="text" autofocus></textarea>
+                <input name="message" type="text" class="textA" id="textAr">
                 <input type="submit" value="Отправить"/>
                 </form>
                 </div>`;
@@ -28,19 +28,27 @@
         reset () {
             this.formEl.reset();
         }
-        // form subscribe on event - press submit - call function _onSubmit
+
+        setFocus(){
+        document.getElementById('textAr').focus();
+    }
+
+        // form subscribe on event - press 'enter' - call function _onSubmit
         _initEvents () {
-            this.el.addEventListener('submit', this._onSubmit.bind(this));
+           this.el.addEventListener('keypress', this._onSubmit.bind(this));
         }
         /**
          * get new event and create event with name 'message' (function trigger)
          * take data through call _getFormData()
-         * param {event} - press submit
+         * param {event} - press 'enter'
          */
-        _onSubmit (event) {
-            event.preventDefault();
-            let formData = this._getFormData();
-            trigger.apply(this, ['message',formData]);
+        _onSubmit (e) {
+            if (e.keyCode!=13) return;
+            {
+                event.preventDefault();
+                let formData = this._getFormData();
+                trigger.apply(this, ['message', formData]);
+            }
         }
         /**
          * Gets page elements
@@ -61,7 +69,7 @@
               {
                  formData[input.name] = {
                      value: input.value
-                 }
+                 };
               }
             });
             return formData;
